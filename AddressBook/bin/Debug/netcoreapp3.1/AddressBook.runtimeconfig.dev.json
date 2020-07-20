@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\punee\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\punee\\.nuget\\packages"
+    ]
+  }
+}
