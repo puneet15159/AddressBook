@@ -25,8 +25,16 @@ namespace AddressBook
 
             addMultipleAddressBook(addressBook);
 
+            
 
 
+
+        }
+
+        private static bool checkDuplicate(string name, IDictionary<string, Person> addressBook)
+        {
+            return addressBook.ContainsKey(name);
+                
         }
 
         private static void addMultipleAddressBook(IDictionary<string, Person> addressBook)
