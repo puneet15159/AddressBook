@@ -21,8 +21,28 @@ namespace AddressBook
 
             editAddressBook(name,newCity,newZip,addressBook);
 
+            deleteFromAddressBook(name,addressBook);
+
+            addMultipleAddressBook(addressBook);
 
 
+
+        }
+
+        private static void addMultipleAddressBook(IDictionary<string, Person> addressBook)
+        {
+            Person person1 = new Person("puneet1", "M", "delhi", "delhi", "delhi", "110090", "123123123");
+            Person person2 = new Person("puneet2", "M", "delhi", "delhi", "delhi", "110090", "123123123");
+            Person person3 = new Person("puneet3", "M", "delhi", "delhi", "delhi", "110090", "123123123");
+
+            addressBook.Add(person1.GetFirstName(), person1);
+            addressBook.Add(person2.GetFirstName(), person2);
+            addressBook.Add(person3.GetFirstName(), person3);
+        }
+
+        private static void deleteFromAddressBook(string name, IDictionary<string, Person> addressBook)
+        {
+            addressBook.Remove(name);
         }
 
         private static void editAddressBook(string name, string newCity, string newZip, IDictionary<string, Person> addressBook)
