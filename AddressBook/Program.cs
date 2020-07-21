@@ -30,6 +30,23 @@ namespace AddressBook
 
             /*sortByCity(addressBook);*/
 
+            string city = "goa";
+            viewPersonByCity(city,addressBook);
+
+        }
+
+        private static void viewPersonByCity(string city, IDictionary<string, Person> addressBook)
+        {
+            for (int i = 0; i < addressBook.Count; i++)
+            {
+                if (addressBook[addressBook.Keys.ElementAt(i)].GetCity() == city)
+                {
+                    Console.WriteLine("Key: {0}, Value: {1}",
+                                                        addressBook.Keys.ElementAt(i),
+                                                        addressBook[addressBook.Keys.ElementAt(i)]);
+                }
+                
+            }
         }
 
         /*private static void sortByCity(IDictionary<string, Person> addressBook)
@@ -40,7 +57,7 @@ namespace AddressBook
         private static void sortByName(IDictionary<string, Person> addressBook)
         {
             var list = addressBook.Keys.ToList();
-
+         
             foreach(var key in list)
             {
                 Console.WriteLine(key, addressBook[key]);
