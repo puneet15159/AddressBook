@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AddressBook
 {
@@ -25,10 +26,25 @@ namespace AddressBook
 
             addMultipleAddressBook(addressBook);
 
-            
+            sortByName(addressBook);
 
+            /*sortByCity(addressBook);*/
 
+        }
 
+        /*private static void sortByCity(IDictionary<string, Person> addressBook)
+        {
+
+        }*/
+
+        private static void sortByName(IDictionary<string, Person> addressBook)
+        {
+            var list = addressBook.Keys.ToList();
+
+            foreach(var key in list)
+            {
+                Console.WriteLine(key, addressBook[key]);
+            }
         }
 
         private static bool checkDuplicate(string name, IDictionary<string, Person> addressBook)
