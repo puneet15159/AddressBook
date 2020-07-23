@@ -20,14 +20,14 @@ namespace AddressBook
             {
                 Console.WriteLine("choice 1: Add Person Details ");
                 Console.WriteLine("choice 2: Editing Person Details ");
-                /*Console.WriteLine("choice 3: Delete  Person Details ");
+                Console.WriteLine("choice 3: Delete  Person Details ");
                 Console.WriteLine("choice 4: Add Multiple Person");
                 Console.WriteLine("choice 5: check for duplicate");
-                Console.WriteLine("choice 6: Short Persion By City");
-                Console.WriteLine("choice 7: Short Persion By Zip");
-                Console.WriteLine("choice 8: View person by city");
-                Console.WriteLine("choice 9: view Person by state");
-                Console.WriteLine("choice 10: Exit From here");*/
+                Console.WriteLine("choice 6: sort By name");
+                Console.WriteLine("choice 7: Sort By city");
+                Console.WriteLine("choice 8: View  by city");
+                Console.WriteLine("choice 9: Search in city");
+                Console.WriteLine("choice 10: Exit From here");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
